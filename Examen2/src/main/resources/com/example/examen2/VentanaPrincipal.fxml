@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen2.VentanaPrincipalController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Examen2/src/main/resources/cesur.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="434.0" text="                     Parking CESUR">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #002858;" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="233.0">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="71.0" layoutY="7.0" text="Nueva entrada" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="47.0" text="Matrícula" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMatricula" layoutX="73.0" layoutY="43.0" prefHeight="25.0" prefWidth="166.0" promptText="matrícula" />
+                  <Label layoutX="14.0" layoutY="83.0" prefHeight="17.0" prefWidth="45.0" text="Modelo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="122.0" prefHeight="17.0" prefWidth="43.0" text="Cliente" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="190.0" text="Tarifa" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radioStandard" layoutX="75.0" layoutY="163.0" mnemonicParsing="false" text="Standard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radioOferta" layoutX="75.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="70.0" text="Oferta" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radioLarga" layoutX="75.0" layoutY="217.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="109.0" text="Larga duración" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="15.0" layoutY="257.0" text="Entrada" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="fechaEntrada" layoutX="71.0" layoutY="253.0" prefHeight="25.0" prefWidth="167.0" />
+                  <DatePicker fx:id="fechaSalida" layoutX="71.0" layoutY="289.0" prefHeight="25.0" prefWidth="167.0" />
+                  <Label layoutX="14.0" layoutY="293.0" text="Salida" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choiceboxCliente" layoutX="74.0" layoutY="118.0" prefHeight="25.0" prefWidth="165.0" />
+                  <ComboBox fx:id="comoboxModelo" layoutX="74.0" layoutY="79.0" prefHeight="25.0" prefWidth="165.0" promptText="Lorem ipsum" />
+                  <Label layoutX="15.0" layoutY="331.0" text="Coste" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelCoste" layoutX="70.0" layoutY="331.0" text="XXX € " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAñadir" layoutX="83.0" layoutY="366.0" mnemonicParsing="false" onAction="#añadir" text="Añadir a la tabla" />
+                  <Button fx:id="btnSalir" layoutX="71.0" layoutY="405.0" mnemonicParsing="false" onAction="#salir" text="Salir de la aplicación" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="652.0">
+               <children>
+                  <TableView fx:id="tablaParking" layoutX="14.0" layoutY="11.0" prefHeight="420.0" prefWidth="599.0">
+                    <columns>
+                      <TableColumn fx:id="cmatricula" prefWidth="83.0" text="Matrícula" />
+                      <TableColumn fx:id="cmodelo" text="Modelo" />
+                        <TableColumn fx:id="cfentrada" prefWidth="106.0" text="Fecha de entrada" />
+                        <TableColumn fx:id="cfsalida" prefWidth="92.0" text="Fecha de salida" />
+                        <TableColumn fx:id="ccliente" prefWidth="74.0" text="Cliente" />
+                        <TableColumn fx:id="ctarifa" prefWidth="83.0" text="Tarifa" />
+                        <TableColumn fx:id="ccoste" prefWidth="79.0" text="Coste" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </SplitPane>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="info" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="920.0" text="       Aplicación creada por Javier Sánchez">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
